@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "dymantic/laravel-instagram-feed": "^3.3",
         "guzzlehttp/guzzle": "^7.5.1",
         "laravel/framework": "^v10.4.1",
         "laravel/jetstream": "^v3.2.0",
