@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SpodStoreController;
+use App\Http\Controllers\InstagramAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/store', [SpodStoreController::class, 'callSpodProductsApi']);
+
+Route::get('instagram-get-auth',[InstagramAuthController::class, 'show'])
+    ->middleware('auth');
+Route::get('instagram-auth-response', [InstagramAuthController::class, 'complete'])
+    ->middleware('auth');
 
 Route::middleware([
     'auth:sanctum',
